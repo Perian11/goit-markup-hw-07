@@ -111,29 +111,50 @@
       </div>
     </section>
     <!--Section 2-->
-    <section class="work section">
+    <section class="work">
       <div class="container">
         <h2 class="work-title">What are we doing</h2>
         <ul class="work-list">
           <li class="work-item">
-            <img src="./images/Section_2/img_1.jpg" alt="examples of work" width="360" height="300" />
+            <picture>
+              <source srcset="./images/Section_2/image1.webp, ./images/Section_2/image@2x.webp" type="imaga/webp" />
+              <source srcset="./images/Section_2/image1.jpg, ./images/Section_2/image@2x.jpg" />
+              <img src="./images/Section_2/image1.jpg" alt="examples of work" width="360" height="300" loading="lazy" />
+            </picture>
           </li>
           <li class="work-item">
-            <img src="./images/Section_2/img_2.jpg" alt="examples of work" width="360" height="300" />
+            <picture>
+              <source srcset="./images/Section_2/image2.webp, ./images/Section_2/image2@2x.webp" type="imaga/webp" />
+              <source srcset="./images/Section_2/image2.jpg, ./images/Section_2/image2@2x.jpg" />
+              <img src="./images/Section_2/image2.jpg" alt="examples of work" width="360" height="300" loading="lazy" />
+            </picture>
           </li>
           <li class="work-item">
-            <img src="./images/Section_2/img_3.jpg" alt="examples of work" width="360" height="300" />
+            <picture>
+              <source srcset="./images/Section_2/imag3.webp, ./images/Section_2/image3@2x.webp" type="imaga/webp" />
+              <source srcset="./images/Section_2/image3.jpg, ./images/Section_2/image3@2x.jpg" />
+              <img src="./images/Section_2/image3.jpg" alt="examples of work" width="360" height="300" loading="lazy" />
+            </picture>
           </li>
         </ul>
       </div>
     </section>
     <!--Section 3-->
+    <!-- <source media="(min-width: 768px)" srcset="" type="imaga/webp" />
+              <source media="(min-width: 768px)" srcset="" />
+              media="(min-width: 1200px)"
+              media="(min-width: 1200px)" -->
     <section class="team section">
       <div class="container">
         <h2 class="team-title">Our Team</h2>
         <ul class="team-list">
           <li class="team-member">
-            <img src="./images/Section_3/Mark_Guerrero.jpg" alt="foto Mark Guerrero" width="264" height="260" />
+            <picture>
+              <source srcset="./images/Section_3/team1.webp, ./images/Section_3/team1@2x.webp" type="imaga/webp" />
+              <source srcset="./images/Section_3/team1.jpg, ./images/Section_3/team1@2x.jpg" />
+              <img src="./images/Section_3/team1.jpg" alt="foto Mark Guerrero" width="264" height="260" />
+            </picture>
+           
             <div class="txt-content">
               <h3 class="team-member-title">Mark Guerrero</h3>
               <p class="team-text">Product Designer</p>
@@ -174,7 +195,12 @@
             </div>
           </li>
           <li class="team-member">
-            <img src="./images/Section_3/Tom_Ford.jpg" alt="foto Tom Ford" width="264" height="260" />
+            <picture>
+              <source srcset="./images/Section_3/team2.webp, ./images/Section_3/team2@2x.webp" type="imaga/webp" />
+              <source srcset="./images/Section_3/team2.jpg, ./images/Section_3/team2@2x.jpg" />
+              <img src="./images/Section_3/team2.jpg" alt="foto Tom Ford" width="264" height="260" />
+            </picture>
+          
             <div class="txt-content">
               <h3 class="team-member-title">Tom Ford</h3>
               <p class="team-text">Frontend Developer</p>
@@ -215,7 +241,12 @@
             </div>
           </li>
           <li class="team-member">
-            <img src="./images/Section_3/Camila_Garcia.jpg" alt="foto Camila Garcia" width="264" height="260" />
+            <picture>
+              <source srcset="./images/Section_3/team3.webp, ./images/Section_3/team3@2x.webp" type="imaga/webp" />
+              <source srcset="./images/Section_3/team3.jpg, ./images/Section_3/team3@2x.jpg" />
+              <img src="./images/Section_3/team3.jpg" alt="foto Camila Garcia" width="264" height="260" />
+            </picture>
+            
             <div class="txt-content">
               <h3 class="team-member-title">Camila Garcia</h3>
               <p class="team-text">Marketing</p>
@@ -256,7 +287,12 @@
             </div>
           </li>
           <li class="team-member">
-            <img src="./images/Section_3/Daniel_Wilson.jpg" alt="foto Daniel Wilson" width="264" height="260" />
+            <picture>
+              <source srcset="./images/Section_3/team4.webp, ./images/Section_3/team4@2x.webp" type="imaga/webp" />
+              <source srcset="./images/Section_3/team4.jpg, ./images/Section_3/team4@2x.jpg" />
+              <img src="./images/Section_3/team4.jpg" alt="foto Daniel Wilson" width="264" height="260" />
+            </picture>
+            
             <div class="txt-content">
               <h3 class="team-member-title">Daniel Wilson</h3>
               <p class="team-text">UI Designer</p>
@@ -307,42 +343,42 @@
           <ul class="customers-list">
             <li class="customer">
               <a class="customer-link" href="">
-                <svg class="customer-logo" width="104" height="56">
+                <svg class="customer-logo">
                   <use href="./images/svg/icons.svg#icon-ya_co"></use>
                 </svg>
               </a>
             </li>
             <li class="customer">
               <a class="customer-link" href="">
-                <svg class="customer-logo" width="104" height="56">
+                <svg class="customer-logo">
                   <use href="./images/svg/icons.svg#icon-tagline_here"></use>
                 </svg>
               </a>
             </li>
             <li class="customer">
               <a class="customer-link" href="">
-                <svg class="customer-logo" width="104" height="56">
+                <svg class="customer-logo">
                   <use href="./images/svg/icons.svg#icon-company"></use>
                 </svg>
               </a>
             </li>
             <li class="customer">
               <a class="customer-link" href="">
-                <svg class="customer-logo" width="104" height="56">
+                <svg class="customer-logo">
                   <use href="./images/svg/icons.svg#icon-foster_peters"></use>
                 </svg>
               </a>
             </li>
             <li class="customer">
               <a class="customer-link" href="">
-                <svg class="customer-logo" width="104" height="56">
+                <svg class="customer-logo">
                   <use href="./images/svg/icons.svg#icon-brand"></use>
                 </svg>
               </a>
             </li>
             <li class="customer">
               <a class="customer-link" href="">
-                <svg class="customer-logo" width="104" height="56">
+                <svg class="customer-logo">
                   <use href="./images/svg/icons.svg#icon-tag_line"></use>
                 </svg>
               </a>

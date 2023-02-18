@@ -1,3 +1,10 @@
+/* 480px, 768px і 1200px.
+@media screen and (min-width: 480px) 
+@media screen and (min-width: 768px) 
+@media screen and (min-width: 1200px) 
+@media screen and (max-width: 767px)
+@media screen and (max-width: 1199px)  */
+
 :root {
   --main-text-color: #2e2f42;
   --text-color: #434455;
@@ -20,13 +27,19 @@
 body {
   font-family: var(--priamyry-font);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-color);
   background-color: var(--background-color);
 }
+
+
+@media screen and (min-width: 1200px) {
+ body {font-weight: 400;}
+}
+
 
 html {
   box-sizing: border-box;
@@ -74,12 +87,26 @@ a {
   overflow: hidden;
 }
 
+
 .container {
-  max-width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
+  max-width: 428px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+  }
+}
 /* Top line */
 
 .header {
@@ -183,25 +210,66 @@ a {
   color: var(--accent-color);
 }
 
-/* hero image */
-
-.hero {
+/* hero image */.hero {
   padding-top: 188px;
   padding-bottom: 188px;
   background-color: var(--second-background-color);
   text-align: center;
-
   background-color: var(--dark-bg-cl);
-  background-image: linear-gradient(rgba(55, 58, 104, 0.7),
-      rgba(55, 58, 104, 0.7)),
-    url(../images/people-office.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  /* Phone screen up to 480px */
+  background-image: linear-gradient(to right,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)), url(../images/bgi-mobile.jpg);
 }
+
+  
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/bgi-mobile@2x.jpg);
+}
+}
+/* Device up to 768px */
+@media screen and (min-width: 481px) {
+  .hero {
+    background-image: linear-gradient(to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)), url(../images/bgi-tablet.jpg);
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(to right,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)),
+        url(../images/bgi-tablet@2x.jpg);
+    }
+  }
+}
+/* Device form 769px to 1600px */
+@media screen and (min-width: 769px) {
+  .hero {
+    background-image: linear-gradient(to right,
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)),
+  url(../images/bgi-desktop.jpg);
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(to right,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)),
+        url(../images/bgi-desktop@2x.jpg);
+    }
+  }
+}
+
+
 
 .hero-title {
   width: 494px;
@@ -280,6 +348,14 @@ a {
 }
 
 /* Section 2 */
+.work {
+  display: none;}
+  
+@media screen and (min-width: 1200px) {
+.work {
+  display: block;}
+}
+
 
 .work-title,
 .team-title {
@@ -422,10 +498,19 @@ img {
   gap: 24px;
 }
 
+@media screen and (max-width: 767px){
+ .customers-list {gap: 16px;}
+}
+
+
 .customer {
   width: 168px;
   height: 88px;
   cursor: pointer;
+}
+@media screen and (max-width: 767px){
+  .customer {
+    width: 198px;}
 }
 
 .customer-link {
@@ -441,10 +526,17 @@ img {
 }
 
 .customer-logo {
+  width: 110px;
+  height: 56px;
   fill: currentColor;
-  /* width: 104px;
-  height: 56px; */
 }
+
+@media screen and (max-width: 1199px) {
+  .customer-logo{
+  width: 104px;
+  }
+}
+
 
 .customer-link:hover,
 .customer-link:focus {
